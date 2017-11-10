@@ -1,0 +1,759 @@
+swagger: '2.0'
+info:
+  description: ''
+  version: 1.0.0
+  title: HomeLii Security Automation
+host: homelii.swagger.io
+basePath: /v2
+tags:
+  - name: device
+    description: Everything about your Device
+    externalDocs:
+      description: ''
+      url: 'http://swagger.io'
+  - name: sensor
+    description: Everything about your Sensor
+    externalDocs:
+      description: ''
+      url: 'http://swagger.io'
+  - name: user
+    description: All user actions
+    externalDocs:
+      description: ''
+      url: 'http://swagger.io'
+  - name: event
+    description: Triggering an Event
+    externalDocs:
+      description: ''
+      url: 'http://swagger.io'
+
+
+schemes:
+  - http
+paths:
+  /device:
+    post:
+      tags:
+        - device
+      summary: Add a new Device
+      description: ''
+      operationId: addDevice
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: |-
+            Device account number needs to be added 
+             'account_number' 
+          required: true
+          schema:
+            $ref: '#/definitions/Device'
+      responses:
+        '201':
+          description: Device added Succesfully
+        '405':
+          description: Invalid input
+          schema:
+            $ref: '#/definitions/ApiResponse'
+      security:
+        - petstore_auth:
+            - 'write:pets'
+            - 'read:pets'
+    put:
+      tags:
+        - device
+      summary: Update an existing device account
+      description: ''
+      operationId: updateDevice
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Update the device account number assigned to a customer
+          required: true
+          schema:
+            $ref: '#/definitions/Device'
+      responses:
+        '400':
+          description: Invalid ID supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: Device not found
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '405':
+          description: Validation exception
+          schema:
+            $ref: '#/definitions/ApiResponse'
+      security:
+        - petstore_auth:
+            - 'write:pets'
+            - 'read:pets'
+  /sensor:
+    post:
+      tags:
+        - sensor
+      summary: Add a new Sensor
+      description: ''
+      operationId: addSensor
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: |-
+            Sensor details needs to be added 
+             'seriel_number'  
+             'seriel_type'  
+             'seriel_number' 
+             'account_number'  
+             'zone_name'   
+             'zone_number' 
+          required: true
+          schema:
+            $ref: '#/definitions/Sensor'
+      responses:
+        '405':
+          description: Invalid input
+          schema:
+            $ref: '#/definitions/ApiResponse'
+      security:
+        - petstore_auth:
+            - 'write:pets'
+            - 'read:pets'
+  '/sensor/{seriel_number}':
+    put:
+      tags:
+        - sensor
+      summary: Update existing sensor in device
+      description: ''
+      operationId: updateSensor
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: seriel_number
+          in: path
+          description: seriel number of sensor
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: |-
+            Update the sensor details added in a customer device. 
+             If new seriel_number key is present, then the old sensor will be replaced by a new sensor.
+          required: true
+          schema:
+            $ref: '#/definitions/SensorUpdate'
+      responses:
+        '400':
+          description: Invalid ID supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: Sensor not found
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '405':
+          description: Validation exception
+          schema:
+            $ref: '#/definitions/ApiResponse'
+      security:
+        - petstore_auth:
+            - 'write:pets'
+            - 'read:pets'
+            
+  '/device/status/{device_id}':
+    get:
+      tags:
+        - device
+      summary: Get the status of the device, active/inactive
+      description: ''
+      operationId: device_status
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: device_id
+          in: path
+          description: device_id of the device to be checked
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/Device'
+        '400':
+          description: Invalid ID supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: Device not found
+          schema:
+            $ref: '#/definitions/ApiResponse'
+  
+  '/device/{username}/{device_id}':
+    get:
+      tags:
+        - device
+      summary: Get the list of sensors installed in the given device
+      description: ''
+      operationId: device_sensor
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          description: ''
+          required: true
+          type: string
+        - name: device_id
+          in: path
+          description: ''
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/SensorsInDevice'
+        '400':
+          description: Invalid username or device ID supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: Either Username or Device ID not found
+  
+  '/user/logout':
+    get:
+      tags:
+        - user
+      summary:  Logout the user
+      description: ''
+      operationId: user_logout
+      produces:
+        - application/json
+        - application/xml
+      responses:
+        '200':
+          description: logout succesful
+          schema:
+            type: string
+
+  
+  
+          
+  '/sensor/status/{sensor_id}':
+    get:
+      tags:
+        - sensor
+      summary: Get the status of the device, active/inactive
+      description: ''
+      operationId: sensor_status
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: sensor_id
+          in: path
+          description: sensor_id of the device to be checked
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/Sensor'
+        '400':
+          description: Invalid ID supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: Device not found
+          schema:
+            $ref: '#/definitions/ApiResponse'
+            
+            
+  '/user':
+    post:
+      tags: 
+        - user
+      summary: Create a user
+      description: Only a logged in store manager can do thi
+      operationId: user_create
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: body
+          in: body
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: user created
+          schema:
+            type: string
+  
+  '/user/login':
+    post:
+      tags:
+        - user
+      summary:  Login the user onto dashboard
+      description: ''
+      operationId: user_login
+      consumes:
+        - application/json
+        - application/xml
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: username
+          in: query
+          description: ''
+          required: true
+          type: string
+        - name: password
+          in: query
+          description: ''
+          required: true
+          type: string
+      responses:
+        '200':
+          description: login succesful
+          schema:
+            type: string
+        '400':
+          description: Invalid username supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: User not found
+          schema:
+            $ref: '#/definitions/ApiResponse'
+  
+  
+  '/user/getaccountdetails/{username}':
+    get:
+      tags:
+        - user
+      summary: Get details of user
+      description: ''
+      operationId: user_detail
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: username
+          in: path
+          description: ''
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/User' 
+        '400':
+          description: Invalid username supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: User not found
+          schema:
+            $ref: '#/definitions/ApiResponse'    
+        
+  '/user/getdevicesassigned/{username}':
+    get:
+      tags:
+        - user
+      summary: Get all devices assigned to user
+      description: ''
+      operationId: user_devices
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: username
+          in: path
+          description: ''
+          type: string
+          required: true
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            $ref: '#/definitions/UserDevices'
+        '400':
+          description: Invalid username supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: User not found
+          schema:
+            $ref: '#/definitions/ApiResponse' 
+  
+  '/event/status/{account_number}/{event_code}':
+    get:
+      tags:
+        - event
+      summary: Get the device's event status in response
+      description: ''
+      operationId: event_status
+      produces:
+        - application/json
+        - application/xml
+      parameters:
+        - name: account_number
+          in: path
+          description: ''
+          required: true
+          type: string
+        - name: event_code
+          in: path
+          description: ''
+          required: true
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+        '400':
+          description: Invalid ID supplied
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '404':
+          description: Device not found
+          schema:
+            $ref: '#/definitions/ApiResponse'
+
+  '/event/trigger/{account_number}/{event_code}':
+    post:
+      tags:
+        - event
+      summary: Get the device's event status in response
+      description: ''
+      operationId: event_trigger
+      produces:
+        - application/xml
+        - application/json
+      parameters:
+        - name: event_code
+          in: path
+          description: Function_code of the requested event
+          required: true
+          type: string
+        - name: account_number
+          in: path
+          description: Account Number of the device
+          required: true
+          type: string
+        - name: onoff
+          in: query
+          description: ON/Off state of Play_Alarm in device
+          required: false
+          type: string
+        - name: apn
+          in: query
+          description: Set access point name of the network in a device
+          required: false
+          type: string
+        - name: apn_name
+          in: query
+          description: set apn name for the access point of a network
+          required: false
+          type: string
+        - name: pwd
+          in: query
+          description: set a password to the apn of selected network
+          required: false
+          type: string
+        - name: ip
+          in: query
+          description: configure gprs ip to the device to send signals
+          required: false
+          type: string
+        - name: port
+          in: query
+          description: configure gprs port to the device to send signals
+          required: false
+          type: string
+        - name: user_id
+          in: query
+          description: set user_id to the device
+          required: false
+          type: string
+        - name: group
+          in: query
+          description: Add a group no. to the device
+          required: false
+          type: string
+        - name: number
+          in: query
+          description: Set a 10 digit Number for configuration
+          required: false
+          type: string
+        - name: alarming_delay
+          in: query
+          description: set delay time for arming mode in device
+          required: false
+          type: string
+        - name: disalarming_delay
+          in: query
+          description: set delay time for disarming mode in device
+          required: false
+          type: string
+        - name: time
+          in: query
+          description: set alarm time in the device
+          required: false
+          type: string
+        - name: attribute
+          in: query
+          description: set attribute to the zone numbers
+          required: false
+          type: string
+      responses:
+        '200':
+          description: successful operation
+          schema:
+            type: string
+          headers:
+            X-Rate-Limit:
+              type: integer
+              format: int32
+              description: calls per hour allowed by the user
+            X-Expires-After:
+              type: string
+              format: date-time
+              description: date in UTC when token expires
+        '400':
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/ApiResponse'
+
+securityDefinitions:
+  petstore_auth:
+    type: oauth2
+    authorizationUrl: 'http://petstore.swagger.io/oauth/dialog'
+    flow: implicit
+    scopes:
+      'write:pets': modify pets in your account
+      'read:pets': read your pets
+  api_key:
+    type: apiKey
+    name: api_key
+    in: header
+    
+    
+definitions:
+  Event:
+    type: object
+    properties:
+      onoff:
+        description: ON/Off state of Play_Alarm in device
+        type: string
+      apn:
+        description: Set access point name of the network in a device
+        type: string
+      apn_name:
+        description: set apn name for the access point of a network
+        type: string
+      pwd:
+        description: set a password to the apn of selected network
+        type: string
+      ip:
+        description: configure gprs ip to the device to send signals
+        type: string
+      port:
+        description: configure gprs port to the device to send signals
+        type: string
+      user_id:
+        description: set user_id to the device
+        type: string
+      group:
+        description: Add a group no. to the device
+        type: string
+      number:
+        description: Set a 10 digit Number for configuration
+        type: string
+      alarming_delay:
+        description: set delay time for arming mode in device
+        type: string
+      disalarming_delay:
+        description: set delay time for disarming mode in device
+        type: string
+      time:
+        description: set alarm time in the device
+        type: string
+      attribute:
+        description: set attribute to the zone numbers
+        type: string
+    xml:
+      name: Event
+  Device:
+    type: object
+    required:
+      - account_number
+    properties:
+      id:
+        type: integer
+        format: int64
+      account_number:
+        type: string
+        example: '112040'
+      status:
+        type: string
+        description: status of the device
+        enum:
+          - active
+          - inactive
+          - damage
+    xml:
+      name: device
+      
+      
+  Sensor:
+    type: object
+    required:
+      - sensor_type
+      - account_number
+      - zone_name
+      - zone_number
+    properties:
+      sensor_type:
+        type: string
+        example: MotionSensor
+      account_number:
+        type: string
+        example: '112040'
+      zone_name:
+        type: string
+        example: Lobby
+      zone_number:
+        type: string
+        example: '22'
+      status:
+        type: string
+        description: status of the sensor
+        enum:
+          - active
+          - inactive
+          - damage
+    xml:
+      name: sensor
+      
+      
+  SensorUpdate:
+    type: object
+    required:
+      - sensor_type
+      - account_number
+      - zone_name
+      - zone_number
+    properties:
+      sensor_type:
+        type: string
+        example: MotionSensor
+      account_number:
+        type: string
+        example: '112040'
+      zone_name:
+        type: string
+        example: Lobby
+      zone_number:
+        type: string
+        example: '22'
+      new_seriel_number:
+        type: string
+        example: '22'
+      status:
+        type: string
+        description: sensor status in device
+        enum:
+          - active
+          - inactive
+          - damage
+    xml:
+      name: sensor
+      
+  UserDevices:
+    type: object
+    properties:
+      username:
+        type: string
+      devices:
+        type: array
+        items:
+          $ref: '#/definitions/Device'
+  User:
+    type: object
+    properties:
+      account_number:
+        type: string
+      username:
+        type: string
+      firstName:
+        type: string
+      lastName:
+        type: string
+      email:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+      membershipStatus:
+        type: string
+        enum:
+          - active
+          - inactive
+  SensorsInDevice:
+    type: object
+    properties:
+      username:
+        type: string
+      device_id:
+        type: string
+      sensors:
+        type: array
+        items:
+          $ref: '#/definitions/Sensor'
+  ApiResponse:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      type:
+        type: string
+      message:
+        type: string
+externalDocs:
+  description: Refer This - Event Codes and their required parameters in json request
+  url: 'http://203.134.219.14:81/homelii/Request_params.pdf'

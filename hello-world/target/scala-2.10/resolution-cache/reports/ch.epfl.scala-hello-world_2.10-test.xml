@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="ch.epfl.scala"
+		module="hello-world_2.10"
+		revision="1.0"
+		conf="test"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
+		date="20171110122548"/>
+	<dependencies>
+		<module organisation="org.typelevel" name="cats_2.10">
+			<revision name="0.9.0" status="release" pubdate="20170116045341" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="5262" time="711" location="/home/rahul/.ivy2/cache/org.typelevel/cats_2.10/ivy-0.9.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/cats_2.10/ivy-0.9.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats_2.10/0.9.0/cats_2.10-0.9.0.pom"/>
+				<caller organisation="ch.epfl.scala" name="hello-world_2.10" conf="test, compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="cats_2.10" type="jar" ext="jar" status="successful" details="" size="303" time="598" location="/home/rahul/.ivy2/cache/org.typelevel/cats_2.10/jars/cats_2.10-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats_2.10/0.9.0/cats_2.10-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-jvm_2.10">
+			<revision name="0.9.0" status="release" pubdate="20170116045322" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="4365" time="642" location="/home/rahul/.ivy2/cache/org.typelevel/cats-jvm_2.10/ivy-0.9.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/cats-jvm_2.10/ivy-0.9.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-jvm_2.10/0.9.0/cats-jvm_2.10-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-jvm_2.10" type="jar" ext="jar" status="successful" details="" size="300" time="731" location="/home/rahul/.ivy2/cache/org.typelevel/cats-jvm_2.10/jars/cats-jvm_2.10-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-jvm_2.10/0.9.0/cats-jvm_2.10-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-free_2.10">
+			<revision name="0.9.0" status="release" pubdate="20170116045323" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="4378" time="642" location="/home/rahul/.ivy2/cache/org.typelevel/cats-free_2.10/ivy-0.9.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/cats-free_2.10/ivy-0.9.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-free_2.10/0.9.0/cats-free_2.10-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-free_2.10" type="jar" ext="jar" status="successful" details="" size="296234" time="2503" location="/home/rahul/.ivy2/cache/org.typelevel/cats-free_2.10/jars/cats-free_2.10-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-free_2.10/0.9.0/cats-free_2.10-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-laws_2.10">
+			<revision name="0.9.0" status="release" pubdate="20170116045337" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="5710" time="694" location="/home/rahul/.ivy2/cache/org.typelevel/cats-laws_2.10/ivy-0.9.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/cats-laws_2.10/ivy-0.9.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.10/0.9.0/cats-laws_2.10-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-laws_2.10" type="jar" ext="jar" status="successful" details="" size="1170273" time="10629" location="/home/rahul/.ivy2/cache/org.typelevel/cats-laws_2.10/jars/cats-laws_2.10-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-laws_2.10/0.9.0/cats-laws_2.10-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-core_2.10">
+			<revision name="0.9.0" status="release" pubdate="20170116045334" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="4592" time="649" location="/home/rahul/.ivy2/cache/org.typelevel/cats-core_2.10/ivy-0.9.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/cats-core_2.10/ivy-0.9.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.10/0.9.0/cats-core_2.10-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-free_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-core_2.10" type="jar" ext="jar" status="successful" details="" size="3444541" time="26672" location="/home/rahul/.ivy2/cache/org.typelevel/cats-core_2.10/jars/cats-core_2.10-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-core_2.10/0.9.0/cats-core_2.10-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-kernel-laws_2.10">
+			<revision name="0.9.0" status="release" pubdate="20170116045301" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="4828" time="626" location="/home/rahul/.ivy2/cache/org.typelevel/cats-kernel-laws_2.10/ivy-0.9.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/cats-kernel-laws_2.10/ivy-0.9.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.10/0.9.0/cats-kernel-laws_2.10-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-kernel-laws_2.10" type="jar" ext="jar" status="successful" details="" size="209692" time="1956" location="/home/rahul/.ivy2/cache/org.typelevel/cats-kernel-laws_2.10/jars/cats-kernel-laws_2.10-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel-laws_2.10/0.9.0/cats-kernel-laws_2.10-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="catalysts-platform_2.10">
+			<revision name="0.0.5" status="release" pubdate="20161108030118" resolver="public" artresolver="public" homepage="https://github.com/typelevel/catalysts" extra-info.apiURL="https://typelevel.github.io/catalysts/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
+				<license name="Apache License" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="1792" time="1067" location="/home/rahul/.ivy2/cache/org.typelevel/catalysts-platform_2.10/ivy-0.0.5.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/catalysts-platform_2.10/ivy-0.0.5.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/catalysts-platform_2.10/0.0.5/catalysts-platform_2.10-0.0.5.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="0.0.5" rev-constraint-default="0.0.5" rev-constraint-dynamic="0.0.5" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.10" conf="compile, runtime" rev="0.0.5" rev-constraint-default="0.0.5" rev-constraint-dynamic="0.0.5" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="catalysts-platform_2.10" type="jar" ext="jar" status="successful" details="" size="1492" time="726" location="/home/rahul/.ivy2/cache/org.typelevel/catalysts-platform_2.10/jars/catalysts-platform_2.10-0.0.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/catalysts-platform_2.10/0.0.5/catalysts-platform_2.10-0.0.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="catalysts-macros_2.10">
+			<revision name="0.0.5" status="release" pubdate="20161108030151" resolver="public" artresolver="public" homepage="https://github.com/typelevel/catalysts" extra-info.apiURL="https://typelevel.github.io/catalysts/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
+				<license name="Apache License" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="2392" time="719" location="/home/rahul/.ivy2/cache/org.typelevel/catalysts-macros_2.10/ivy-0.0.5.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/catalysts-macros_2.10/ivy-0.0.5.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/catalysts-macros_2.10/0.0.5/catalysts-macros_2.10-0.0.5.pom"/>
+				<caller organisation="org.typelevel" name="catalysts-platform_2.10" conf="compile, runtime" rev="0.0.5" rev-constraint-default="0.0.5" rev-constraint-dynamic="0.0.5" callerrev="0.0.5"/>
+				<artifacts>
+					<artifact name="catalysts-macros_2.10" type="jar" ext="jar" status="successful" details="" size="18074" time="1105" location="/home/rahul/.ivy2/cache/org.typelevel/catalysts-macros_2.10/jars/catalysts-macros_2.10-0.0.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/catalysts-macros_2.10/0.0.5/catalysts-macros_2.10-0.0.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="discipline_2.10">
+			<revision name="0.7.2" status="release" pubdate="20161102233537" resolver="public" artresolver="public" homepage="https://github.com/typelevel/discipline" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
+				<license name="MIT" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="successful" details="" size="2249" time="1027" location="/home/rahul/.ivy2/cache/org.typelevel/discipline_2.10/ivy-0.7.2.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/discipline_2.10/ivy-0.7.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/discipline_2.10/0.7.2/discipline_2.10-0.7.2.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="0.7.2" rev-constraint-default="0.7.2" rev-constraint-dynamic="0.7.2" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.10" conf="compile, runtime" rev="0.7.2" rev-constraint-default="0.7.2" rev-constraint-dynamic="0.7.2" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="discipline_2.10" type="jar" ext="jar" status="successful" details="" size="44125" time="1335" location="/home/rahul/.ivy2/cache/org.typelevel/discipline_2.10/jars/discipline_2.10-0.7.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/discipline_2.10/0.7.2/discipline_2.10-0.7.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalacheck" name="scalacheck_2.10">
+			<revision name="1.13.4" status="release" pubdate="20161101194509" resolver="public" artresolver="public" homepage="http://www.scalacheck.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+				<license name="BSD-style" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="successful" details="" size="1592" time="610" location="/home/rahul/.ivy2/cache/org.scalacheck/scalacheck_2.10/ivy-1.13.4.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.scalacheck/scalacheck_2.10/ivy-1.13.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.10/1.13.4/scalacheck_2.10-1.13.4.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="1.13.4" rev-constraint-default="1.13.4" rev-constraint-dynamic="1.13.4" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.10" conf="compile, runtime" rev="1.13.4" rev-constraint-default="1.13.4" rev-constraint-dynamic="1.13.4" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="discipline_2.10" conf="compile, runtime" rev="1.13.4" rev-constraint-default="1.13.4" rev-constraint-dynamic="1.13.4" callerrev="0.7.2"/>
+				<artifacts>
+					<artifact name="scalacheck_2.10" type="jar" ext="jar" status="successful" details="" size="3092016" time="21033" location="/home/rahul/.ivy2/cache/org.scalacheck/scalacheck_2.10/jars/scalacheck_2.10-1.13.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalacheck/scalacheck_2.10/1.13.4/scalacheck_2.10-1.13.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="test-interface">
+			<revision name="1.0" status="release" pubdate="20130629041435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-sbt.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+				<license name="BSD" url="https://github.com/sbt/test-interface/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="2589" time="0" location="/home/rahul/.ivy2/cache/org.scala-sbt/test-interface/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom"/>
+				<caller organisation="org.scalacheck" name="scalacheck_2.10" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.13.4"/>
+				<artifacts>
+					<artifact name="test-interface" type="jar" ext="jar" status="no" details="" size="14755" time="0" location="/home/rahul/.ivy2/cache/org.scala-sbt/test-interface/jars/test-interface-1.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-kernel_2.10">
+			<revision name="0.9.0" status="release" pubdate="20170116045313" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="3665" time="616" location="/home/rahul/.ivy2/cache/org.typelevel/cats-kernel_2.10/ivy-0.9.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/cats-kernel_2.10/ivy-0.9.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.10/0.9.0/cats-kernel_2.10-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-core_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-kernel_2.10" type="jar" ext="jar" status="successful" details="" size="4092731" time="21628" location="/home/rahul/.ivy2/cache/org.typelevel/cats-kernel_2.10/jars/cats-kernel_2.10-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.10/0.9.0/cats-kernel_2.10-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="cats-macros_2.10">
+			<revision name="0.9.0" status="release" pubdate="20170116045236" resolver="public" artresolver="public" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="4028" time="654" location="/home/rahul/.ivy2/cache/org.typelevel/cats-macros_2.10/ivy-0.9.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/cats-macros_2.10/ivy-0.9.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.10/0.9.0/cats-macros_2.10-0.9.0.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-core_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-free_2.10" conf="compile, runtime" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="cats-macros_2.10" type="jar" ext="jar" status="successful" details="" size="6511" time="614" location="/home/rahul/.ivy2/cache/org.typelevel/cats-macros_2.10/jars/cats-macros_2.10-0.9.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.10/0.9.0/cats-macros_2.10-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="machinist_2.10">
+			<revision name="0.6.1" status="release" pubdate="20161029204401" resolver="public" artresolver="public" homepage="http://github.com/typelevel/machinist" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="successful" details="" size="1780" time="611" location="/home/rahul/.ivy2/cache/org.typelevel/machinist_2.10/ivy-0.6.1.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/machinist_2.10/ivy-0.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/machinist_2.10/0.6.1/machinist_2.10-0.6.1.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-macros_2.10" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.10" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-core_2.10" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-free_2.10" conf="compile, runtime" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.6.1" rev-constraint-default="0.6.1" rev-constraint-dynamic="0.6.1" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="machinist_2.10" type="jar" ext="jar" status="successful" details="" size="32325" time="764" location="/home/rahul/.ivy2/cache/org.typelevel/machinist_2.10/jars/machinist_2.10-0.6.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/machinist_2.10/0.6.1/machinist_2.10-0.6.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.mpilquist" name="simulacrum_2.10">
+			<revision name="0.10.0" status="release" pubdate="20161020071626" resolver="public" artresolver="public" homepage="http://github.com/mpilquist/simulacrum" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="Three-clause BSD-style" url="https://github.com/mpilquist/simulacrum/blob/master/LICENSE"/>
+				<metadata-artifact status="successful" details="" size="2249" time="613" location="/home/rahul/.ivy2/cache/com.github.mpilquist/simulacrum_2.10/ivy-0.10.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/com.github.mpilquist/simulacrum_2.10/ivy-0.10.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/mpilquist/simulacrum_2.10/0.10.0/simulacrum_2.10-0.10.0.pom"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-macros_2.10" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.10" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-core_2.10" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-free_2.10" conf="compile, runtime" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="0.10.0" rev-constraint-default="0.10.0" rev-constraint-dynamic="0.10.0" callerrev="0.9.0"/>
+				<artifacts>
+					<artifact name="simulacrum_2.10" type="jar" ext="jar" status="successful" details="" size="147586" time="1581" location="/home/rahul/.ivy2/cache/com.github.mpilquist/simulacrum_2.10/jars/simulacrum_2.10-0.10.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/mpilquist/simulacrum_2.10/0.10.0/simulacrum_2.10-0.10.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.typelevel" name="macro-compat_2.10">
+			<revision name="1.1.1" status="release" pubdate="20160215162020" resolver="public" artresolver="public" homepage="https://github.com/milessabin/macro-compat" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="2096" time="617" location="/home/rahul/.ivy2/cache/org.typelevel/macro-compat_2.10/ivy-1.1.1.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.typelevel/macro-compat_2.10/ivy-1.1.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/macro-compat_2.10/1.1.1/macro-compat_2.10-1.1.1.pom"/>
+				<caller organisation="org.typelevel" name="catalysts-macros_2.10" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.0.5"/>
+				<caller organisation="com.github.mpilquist" name="simulacrum_2.10" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.10.0"/>
+				<artifacts>
+					<artifact name="macro-compat_2.10" type="jar" ext="jar" status="successful" details="" size="158172" time="4123" location="/home/rahul/.ivy2/cache/org.typelevel/macro-compat_2.10/jars/macro-compat_2.10-1.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/typelevel/macro-compat_2.10/1.1.1/macro-compat_2.10-1.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalamacros" name="quasiquotes_2.10">
+			<revision name="2.1.0" status="release" pubdate="20151119214126" resolver="public" artresolver="public" homepage="https://github.com/scalamacros/paradise" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html"/>
+				<metadata-artifact status="successful" details="" size="1841" time="608" location="/home/rahul/.ivy2/cache/org.scalamacros/quasiquotes_2.10/ivy-2.1.0.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.scalamacros/quasiquotes_2.10/ivy-2.1.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.1.0/quasiquotes_2.10-2.1.0.pom"/>
+				<caller organisation="org.typelevel" name="catalysts-macros_2.10" conf="compile, runtime" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="0.0.5"/>
+				<caller organisation="org.typelevel" name="macro-compat_2.10" conf="compile, runtime" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="1.1.1"/>
+				<caller organisation="com.github.mpilquist" name="simulacrum_2.10" conf="compile, runtime" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="0.10.0"/>
+				<artifacts>
+					<artifact name="quasiquotes_2.10" type="jar" ext="jar" status="successful" details="" size="720702" time="13178" location="/home/rahul/.ivy2/cache/org.scalamacros/quasiquotes_2.10/jars/quasiquotes_2.10-2.1.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.1.0/quasiquotes_2.10-2.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.10.6" status="release" pubdate="20150918150538" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
+			"/>
+				<metadata-artifact status="successful" details="" size="1941" time="609" location="/home/rahul/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.6.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.6.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6.pom"/>
+				<caller organisation="org.scalamacros" name="quasiquotes_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="2.1.0"/>
+				<caller organisation="org.typelevel" name="machinist_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.6.1"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="successful" details="" size="3206180" time="29783" location="/home/rahul/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.6" status="release" pubdate="20150918150528" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="true" searched="true" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
+         "/>
+				<metadata-artifact status="successful" details="" size="2044" time="658" location="/home/rahul/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml" searched="true" original-local-location="/home/rahul/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom"/>
+				<caller organisation="org.scalacheck" name="scalacheck_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="1.13.4"/>
+				<caller organisation="org.typelevel" name="cats-laws_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="catalysts-macros_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.0.5"/>
+				<caller organisation="org.typelevel" name="cats-kernel-laws_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.9.0"/>
+				<caller organisation="org.scalamacros" name="quasiquotes_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="2.1.0"/>
+				<caller organisation="org.typelevel" name="macro-compat_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="1.1.1"/>
+				<caller organisation="org.typelevel" name="cats-core_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="catalysts-platform_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.0.5"/>
+				<caller organisation="org.typelevel" name="cats_2.10" conf="default, compile, runtime, master" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-macros_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-jvm_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="cats-kernel_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.9.0"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="2.10.6"/>
+				<caller organisation="ch.epfl.scala" name="hello-world_2.10" conf="test, compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="1.0"/>
+				<caller organisation="org.typelevel" name="cats-free_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.9.0"/>
+				<caller organisation="org.typelevel" name="discipline_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.7.2"/>
+				<caller organisation="com.github.mpilquist" name="simulacrum_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.10.0"/>
+				<caller organisation="org.typelevel" name="machinist_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.6.1"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="successful" details="" size="7132001" time="59761" location="/home/rahul/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

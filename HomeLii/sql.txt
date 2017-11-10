@@ -1,0 +1,22 @@
+CREATE TABLE partitiontutorial
+(
+   myoffset           SINT64    NOT NULL,
+   mykey       VARCHAR   NOT NULL,
+   mymessage        VARCHAR   NOT NULL,
+   time         TIMESTAMP NOT NULL,
+   PRIMARY KEY (
+     (mykey, QUANTUM(time, 15, 'm')),
+      mykey, time
+   )
+);
+
+
+
+Create table testtable
+(
+id SINT64 NOT NULL,
+name varchar,
+surname varchar,
+PRIMARY KEY(id,name)
+);
+
